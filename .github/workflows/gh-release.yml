@@ -1,0 +1,29 @@
+# do a release after ci user has pushed the tag to main
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+jobs:
+  gh-release:
+    # only run on ci commits
+    if: "contains(github.event.head_commit.author.name, 'SAP Mentors & Friends')"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        # read all commit messages since the last tag
+      - name: get commit messages
+        run: |
+          LOG=`git log --oneline $(git describe --tags --abbrev=0 @^)..@`
+          echo "_BODY=$LOG" >> $GITHUB_ENV
+      - name: set tag to env var
+        run: echo "_RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
+      - uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env._RELEASE_VERSION }}
+          release_name: Release ${{ env._RELEASE_VERSION }}
+          body: ${{ env._BODY }}
+          draft: false
+          prerelease: false
