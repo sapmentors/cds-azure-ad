@@ -1,6 +1,6 @@
 {
   "name": "cds-azure-ad",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "description": "Azure AD and Azure AD B2C Custom-Defined Authentication for SAP CDS (CAP)",
   "main": "index.js",
   "scripts": {
