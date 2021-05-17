@@ -6,7 +6,7 @@ on:
   push:
     branches: [main]
 
-jobs:
+jobs:  
   build:
     # only run on non-ci commits and
     # on filter docs-, deps-, deps-dev + ci-labeled commits
@@ -19,6 +19,8 @@ jobs:
           node-version: 12
       - run: npm ci
       - run: npm test
+      - name: Calculate Fosstars security rating
+        uses: SAP/fosstars-rating-core-action@v1.0.0
 
   publish-npm:
     # only run on non-ci commits
