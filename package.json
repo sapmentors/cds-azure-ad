@@ -28,7 +28,7 @@
   },
   "homepage": "https://github.com/sapmentors/cds-azure-ad#readme",
   "dependencies": {
-    "@sap/cds": "~5.1.4",
+    "@sap/cds": "~5.4.2",
     "@sap/xsenv": "^3.1.0",
     "@sap/xssec": "^3.2.0",
     "passport": "^0.4.1",
