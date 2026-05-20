@@ -6,7 +6,7 @@ on:
   push:
     branches: [main]
 
-jobs:  
+jobs:
   build:
     # only run on non-ci commits and
     # on filter docs-, deps-, deps-dev + ci-labeled commits

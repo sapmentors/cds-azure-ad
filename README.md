@@ -13,7 +13,7 @@ Add this package to your [SAP Cloud Application Programming Model](https://cap.c
 npm install cds-azure-ad
 ```
 
-Then add this configuration to the cds section of your *package.json*:
+Then add this configuration to the cds section of your _package.json_:
 
 ```JSON
   "cds": {
@@ -25,7 +25,7 @@ Then add this configuration to the cds section of your *package.json*:
   }
 ```
 
-The configuration for the [passport-azure-ad BearerStrategy](https://github.com/AzureAD/passport-azure-ad#42-bearerstrategy) is provided via the following content in the file *default-env.json* the root folder of this project. The B2C tenant used here is the sample is a tenant provided by Microsoft which is used also for their examples. As this file might inlcude sensitive data it's not included in the git repository.
+The configuration for the [passport-azure-ad BearerStrategy](https://github.com/AzureAD/passport-azure-ad#42-bearerstrategy) is provided via the following content in the file _default-env.json_ the root folder of this project. The B2C tenant used here is the sample is a tenant provided by Microsoft which is used also for their examples. As this file might inlcude sensitive data it's not included in the git repository.
 
 ```json
 {
@@ -34,9 +34,7 @@ The configuration for the [passport-azure-ad BearerStrategy](https://github.com/
       {
         "name": "cap-azure-ad-b2c-uaa",
         "label": "azure-ad",
-        "tags": [
-          "azure-ad"
-        ],
+        "tags": ["azure-ad"],
         "plan": "space",
         "credentials": {
           "identityMetadata": "https://fabrikamb2c.b2clogin.com/fabrikamb2c.onmicrosoft.com/B2C_1_SUSI/v2.0/.well-known/openid-configuration/",
@@ -58,4 +56,3 @@ The configuration for the [passport-azure-ad BearerStrategy](https://github.com/
 ## Projects using cds-azure-ad
 
 - [cap-azure-ad-b2c](https://github.com/gregorwolf/cap-azure-ad-b2c) – An example project with multiple deployment scenarios (SAP BTP Cloud Foundery, SAP BTP Kyma)
-
