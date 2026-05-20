@@ -1,6 +1,9 @@
 {
   "name": "cds-azure-ad",
   "version": "0.0.21",
+  "engines": {
+    "node": "^20 || ^22 || ^22"
+  },
   "description": "Azure AD and Azure AD B2C Custom-Defined Authentication for SAP CDS (CAP)",
   "main": "index.js",
   "scripts": {
@@ -28,29 +31,29 @@
   },
   "homepage": "https://github.com/sapmentors/cds-azure-ad#readme",
   "dependencies": {
-    "@sap/cds": "~5.7.4",
-    "@sap/xsenv": "^3.1.1",
-    "@sap/xssec": "^3.2.11",
-    "passport": "^0.5.2",
+    "@sap/cds": "~9.9.1",
+    "@sap/xsenv": "^6.2.1",
+    "@sap/xssec": "^4.13.0",
+    "passport": "^0.7.0",
     "passport-azure-ad": "latest"
   },
   "devDependencies": {
-    "@commitlint/cli": "^16.0.2",
-    "@commitlint/config-conventional": "^16.0.0",
-    "@types/jest": "^27.4.0",
+    "@commitlint/cli": "^21.0.1",
+    "@commitlint/config-conventional": "^21.0.1",
+    "@types/jest": "^30.0.0",
     "copyfiles": "^2.4.1",
-    "dotenv": "^10.0.0",
-    "eslint": "^8.6.0",
-    "eslint-plugin-jest": "^25.3.4",
-    "express": "^4.17.2",
-    "husky": "^7.0.4",
-    "jest": "^27.4.7",
-    "lint-staged": "^12.1.7",
+    "dotenv": "^17.4.2",
+    "eslint": "^10",
+    "eslint-plugin-jest": "^29.15.2",
+    "express": "^5.2.1",
+    "husky": "^9.1.7",
+    "jest": "^30.4.2",
+    "lint-staged": "^17.0.5",
     "npm-run-all": "^4.1.5",
-    "prettier": "2.5.1",
-    "standard-version": "^9.3.2",
-    "supertest": "^6.1.6",
-    "uuidv4": "^6.2.12"
+    "prettier": "3.8.3",
+    "standard-version": "^9.5.0",
+    "supertest": "^7.2.2",
+    "uuidv4": "^6.2.13"
   },
   "husky": {
     "hooks": {
